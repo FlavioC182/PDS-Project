@@ -1,0 +1,33 @@
+﻿<Window x:Class="Client.Connection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Connessione ad un server" Height="210" Width="310" WindowStartupLocation="CenterScreen" SnapsToDevicePixels="True" Background="#FFE2E1E1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="3" Background="#1c7cd6" />
+        <TextBlock x:Name="MainText" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment ="Center" Margin="10" Text="Inserire l'indirizzo IP e la porta del server "></TextBlock>
+        <Label x:Name="lblIPAddress" Grid.Row="1" HorizontalAlignment= "Left" VerticalAlignment="Center"  Content="Indirizzo IP: " Margin="10,5.2,0,9.6"/>
+        <TextBox x:Name="txtAddress1" Grid.Row="1" Width="32" Height="24" VerticalAlignment="Center" Margin="88,7,173.6,9" LostFocus="DefaultValue" GotFocus="SelectAll" PreviewTextInput="IsAllowedCharacter" />
+        <TextBox x:Name="txtAddress2" Grid.Row="1" Width="32" Height="24" VerticalAlignment="Center" Margin="136,7,125.6,9" LostFocus="DefaultValue" GotFocus="SelectAll" PreviewTextInput="IsAllowedCharacter" />
+        <TextBox x:Name="txtAddress3" Grid.Row="1" Width="32" Height="24" VerticalAlignment="Center" Margin="186,7,75.6,9" LostFocus="DefaultValue" GotFocus="SelectAll" PreviewTextInput="IsAllowedCharacter" />
+        <TextBox x:Name="txtAddress4" Grid.Row="1" Width="32" Height="24" VerticalAlignment="Center" Margin="236,7,25.6,9" LostFocus="DefaultValue" GotFocus="SelectAll" PreviewTextInput="IsAllowedCharacter" />
+        <TextBlock x:Name="Dot1" Grid.Row="1" TextWrapping ="Wrap" HorizontalAlignment="Left" Margin="127,17,0,8" Text ="." />
+        <TextBlock x:Name="Dot2" Grid.Row="1" TextWrapping ="Wrap" HorizontalAlignment="Left" Margin="226,17,0,8" Text ="." />
+        <TextBlock x:Name="Dot3" Grid.Row="1" TextWrapping ="Wrap" HorizontalAlignment="Left" Margin="175,17,0,8" Text ="." />
+
+        <Label x:Name="lblPortNumber" Grid.Row="2" HorizontalAlignment= "Left" VerticalAlignment="Center" Content="Porta: " Margin="10,5.4,0,10.4"/>
+        <TextBox x:Name="txtPort" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="48" Height="24" Margin="88,6,0,10" GotFocus="SelectAll" PreviewTextInput="IsAllowedCharacter" />
+
+        <Button x:Name="ConnectButton" Grid.Row="3" Content="Connetti" Height="32" Width="64" Margin="113,10,116.6,8.4" Click="C_ConnectButton"/>
+    </Grid>
+</Window>
